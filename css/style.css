@@ -25,8 +25,9 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
     header{
        background: url('../assets/photos/botanical-cactus-cactus-plant-403571.jpg');
-       background-size: 100% 100%;
+       background-size: cover;
        background-attachment: fixed;
+       background-position: center;
        height: 100vh;
        position: relative;
     }
@@ -39,16 +40,19 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
     .header-subtext{
         color: #0F133F;
-        font-size: 20px;
+        font-size: 40px;
         margin: 8% 15%;
     }
 
     .header-subtext h1{
-        font-size: 5rem;
+        font-size: 70px;
+        text-align: left;
     }
 
-    .header-subtext p{
-        font-size: 40px;
+    @media(max-width: 330px){
+        .header-subtext h1{
+            font-size: 50px;
+        }
     }
 
     .burger-menu{
@@ -149,12 +153,19 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
         padding: 0;
     }
 
+    @media(max-width: 1030px){
+        ul.tools{
+            width: 90%;
+        }
+    }
+    
+
     .tools img{
         width: 60px;
     }
 
     .about-image{
-        width: 350px; 
+        width: 310px; 
         padding-top: 50px;
    }
 
@@ -215,6 +226,16 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
         margin: 20px 5px 20px 5px;
    }
 
+   @media(max-width: 900px){
+       .projects-item-preview-links{
+           display: grid;
+       }
+
+       .projects-item-preview-links a{
+           margin: 3%;
+       }
+   }
+
    .projects-item-preview-links a{
         border: 1px solid black;
         border-radius: 20px;
@@ -232,15 +253,19 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
         text-align: center;
         padding-bottom: 3%;
     }
+
+    .project-item-desc ul{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 
            /* section 3 */
         
    .contact{
-        transform: skewY(-5deg);
         position: relative;
-        top: -85px;
+        top: -110px;
         bottom: 0;
         right: 0;
         left: 0;
@@ -250,14 +275,24 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
    }
 
    .contact-container{
-       transform: skewY(5deg);
        padding-top: 14%;
        position: relative;
        height: 100vh;
        background: url('../assets/photos/cacti-cactus-cactus-flower-1903965.jpg');
-       background-size: 100% 100%;
+       background-size: cover;
        background-attachment: fixed;
    }
+
+   @media(max-width: 800px){
+        .contact-container{
+            padding-top: 27%;
+        }
+    }  
+    @media(max-width: 330px){
+        .contact-container{
+            padding-top: 40%;
+        }
+    }  
 
    .contact-wrapper{
        width: 75%;
@@ -291,11 +326,11 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
                     /* footer */
     .footer{
-        /* position: relative; */
-        /* padding: 15px 0; */
+        position: relative;
+        padding: 15px 0;
         background-color: #EEEAE9;
         color: #ffffff;
-}
+    }
 
     .contact-icon{
         width: 25px;
